@@ -1,5 +1,8 @@
 ## Getting started with `cf push`
 
+### Note, all the instructions are intended to be copy-pasted into the terminal. The terminal can be found under applications / utilities on MacOS.
+
+
 ******* Prepare system *******
 
 Install homebrew (if you haven't already)\
