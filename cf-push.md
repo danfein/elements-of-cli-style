@@ -41,4 +41,4 @@ Build the app\
 ******* Push your App *******  
 
 Push the built app to CF\
-'cf push'
+`cf push`
