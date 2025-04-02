@@ -1,6 +1,7 @@
 ## Getting started with `cf push`
 
 ******* Prepare system *******
+
 Install homebrew (if you haven't already)
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `
 
@@ -12,6 +13,7 @@ Use brew to install Maven and Gradle (which we can use to build our Java Apps)
 
 
 ******* Install CLI and Login *******  
+
 Install CF CLI 
 `brew install cloudfoundry/tap/cf-cli@8`
 
@@ -22,6 +24,7 @@ Login (it will give you a link to follow to get your key)
 `cf login --sso `
 
 ******* Get an App *******  
+
 Sample apps you can build and push
 `https://github.com/cloudfoundry-samples`
 
@@ -35,5 +38,6 @@ Build the app
 `mvn clean package`
 
 ******* Push your App *******  
+
 Push the built app to CF
 'cf push'
