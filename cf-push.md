@@ -36,9 +36,13 @@
 
 #### CLI
 1. **Create Org**  
-`cf create-org example-name`  
-2. **Create Space**  
+`cf create-org example-name`
+2. **Target Org**  
+`cf target -o example-name`  
+4. **Create Space**  
 `cf create-space example-name`
+2. **Target Space**  
+`cf target -s example-name`  
 
 ## Get an App  
 
