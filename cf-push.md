@@ -7,8 +7,8 @@
 ******* Prepare system *******  
 
 **Install homebrew** (if you haven't already)  
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `
-*[Brew](https://brew.sh/) is a package manager, and is used to install and update software*
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `    
+*[Brew](https://brew.sh/) is a package manager, and is used to install and update software*  
 
 **Use Brew to install Java** (if you haven't already)  
 `brew install openjdk@21 `  
