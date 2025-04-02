@@ -36,7 +36,7 @@ Move into the downloaded directory\
 `cd hello-spring-cloud`
 
 Build the app\
-`mvn clean package`
+`mvn clean package `
 
 ******* Push your App *******  
 
