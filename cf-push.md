@@ -14,7 +14,7 @@
 `brew install openjdk@21 `  
 *I had trouble with 22, so I have been using the prior release.*  
 
-3. **Brew install Maven and Gradle** 
+3. **Brew install Maven and Gradle**  
 `brew install maven gradle`  
 *[Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/) are tools used to build Java Apps*   
 
