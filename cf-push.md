@@ -29,6 +29,17 @@
 6. **Login** (it will give you a link to follow to get your key)  
 `cf login --sso `  
 
+## Prepare Environment  
+#### GUI
+1. **Login to [AppsMan](https://apps.sys.dhaka.cf-app.com/)**  
+2. Create Org and Space  
+
+#### CLI
+1. **Create Org**  
+`cf create-org example-name`  
+2. **Create Space**  
+`cf create-space example-name`
+
 ## Get an App  
 
 7. Sample apps you can build and push  
