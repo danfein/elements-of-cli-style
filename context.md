@@ -56,3 +56,36 @@ Log in by visiting this link:
 the Tanzu Platform for Kubernetes service. Please ensure correct organization authentication and access permissions
 
 ```
+
+## Tanzu Projects
+```
+$ tanzu projects list
+Listing projects from One Tanzu Integration org
+
+  NAME                                 AGE  INTEGRATIONS
+  Free Tier Project                    84d
+  aria-test                            84d
+  falcons-project-2                    84d
+  jd-proj                              84d
+  ...
+
+$tanzu projects use new-horizon
+✓ Successfully set project to new-horizon
+```
+
+## Tanzu Context
+```
+  $ tanzu context list
+  NAME                                    ISACTIVE  TYPE   PROJECT      SPACE
+  CMBU_TMM                                false     tanzu
+  One_Tanzu_Integration-staging-3fb994fb  true      tanzu  new-horizon
+
+$ tanzu context use
+? Select a context  [Use arrows to move, type to filter]
+> CMBU_TMM            (https://ucp.platform.tanzu.broadcom.com/org/2[org-id])
+  One_Tanzu_Integration-staging-3fb994fb(https://ucp.platform-verify.tanzu.broadcom.com/org/[org-id]])
+
+  [i] Successfully activated context 'One_Tanzu_Integration-staging-3fb994fb' (Type: tanzu, Project: new-horizon ([org-id]))
+
+```
+Danger of running long.
