@@ -10,11 +10,11 @@
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `    
 *[Brew](https://brew.sh/) is a package manager, and is used to install and update software*  
 
-2. **Use Brew to install Java** (if you plan on building apps to push)    
-`brew install openjdk@21 `  
+2. **Use Brew to install Java** (if you plan on building apps to push)  
+3. `brew install openjdk@21 `  
 *I had trouble with 22, so I have been using the prior release.*  
 
-3. **Brew install Maven and Gradle**  (if you plan on building apps to push)
+4. **Brew install Maven and Gradle**  (if you plan on building apps to push)
 `brew install maven gradle`  
 *[Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/) are tools used to build Java Apps*   
 
