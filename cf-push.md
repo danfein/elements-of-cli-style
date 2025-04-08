@@ -20,13 +20,13 @@
 
 ## Install CLI and Login  
 
-4. **Install CF CLI**  
+1. **Install CF CLI**  
 `brew install cloudfoundry/tap/cf-cli@8`
 
-5. **Set CLI target**  
+2. **Set CLI target**  
 `cf api https://api.sys.dhaka.cf-app.com`  
 
-6. **Login** (it will give you a link to follow to get your key)  
+3. **Login** (it will give you a link to follow to get your key)  
 `cf login --sso `  
 
 ## Prepare Environment  
@@ -46,20 +46,20 @@
 
 ## Get an App  
 
-7. Sample apps you can build and push  
+1. Sample apps you can build and push  
 `https://github.com/cloudfoundry-samples`  
 
-8. **Copy one of the sample repos**  
+2. **Copy one of the sample repos**  
 `git clone https://github.com/cloudfoundry-samples/hello-spring-cloud.git `
 
-9. **Move into the downloaded app directory**  
+3. **Move into the downloaded app directory**  
 `cd hello-spring-cloud`  
 *`cd` means change directory*  
 
-10. **Build the app**  
+4. **Build the app**  
 `mvn clean package `
 
 ## Push your App    
 
-11. Push the built app to CF\
+1. Push the built app to CF\
 `cf push`
