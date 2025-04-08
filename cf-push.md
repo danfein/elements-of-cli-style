@@ -6,7 +6,7 @@
 
 ## Prepare system 
 
-1. **Install homebrew** (if you haven't already)  
+1. **Install homebrew** 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `    
 *[Brew](https://brew.sh/) is a package manager, and is used to install and update software*  
 
