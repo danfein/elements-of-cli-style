@@ -1,78 +1,24 @@
-# Updates
+# Gcloud CLI installation
 
-## Pihole (DNS ad-blocker)
-
-```
-$ pihole -up
-[i] Checking for updates…
-[i] Pi-hole Core: update available
-[i] Web Interface: update available
-[i] FTL: update available
-[i] Pi-hole core files out of date, updating local repo.
-[✓] Check for existing repository in /etc/.pihole
-...
-```
-
-Pihole uses a single dash with a word flag.
-Conventionally a single dash is used with one letter flags `-v`, and two dashes would be used for words `--up`
-
-
-## Brew (macOS package manager)
+Docs: https://cloud.google.com/sdk/docs/install  
 
 ```
-❯ brew update
-Already up-to-date.
-```
+➜  google-cloud-sdk ./install.sh
+Welcome to the Google Cloud CLI!
 
-```
-❯ brew update
-Updated 9 taps (tilt-dev/tap, cloudfoundry/tap, knative/client, homebrew/core, homebrew/cask, homebrew/bundle, homebrew/cask-fonts, vmware-tanzu/pinniped and vmware-tanzu/carvel).
-==> New Formulae
-ansible-language-server   httpyac                   localtunnel               werf
-gops                      knative/client/kn@1.3     sophus
-==> Updated Formulae
-Updated 730 formulae.
-==> Deleted Formulae
-boost-python                       komposition                        szip
-==> New Casks
-banana-cake-pop           font-harano-aji           manymc                    todesk
-descript                  gdevelop                  mixed-in-key-live         vivid
-espanso                   keysafe                   neovide                   wpsoffice-cn
-==> Updated Casks
-Updated 434 casks.
-```
+To help improve the quality of this product, we collect anonymized usage data
+and anonymized stacktraces when crashes are encountered; additional information
+is available at <https://cloud.google.com/sdk/usage-statistics>. This data is
+handled in accordance with our privacy policy
+<https://cloud.google.com/terms/cloud-privacy-notice>. You may choose to opt in this
+collection now (by choosing 'Y' at the below prompt), or at any time in the
+future by running the following command:
 
-```
-❯ brew upgrade
-==> Upgrading 13 outdated packages:
-coreutils 9.0_1 -> 9.1
-vmware-tanzu/carvel/imgpkg v0.27.0 -> v0.28.0
-go 1.18 -> 1.18.1
-...
-==> Downloading https://github.com/tilt-dev/tilt/releases/download/v0.27.2/tilt.0.27.2.mac.x86_64.tar.gz
-==> Downloading from https://objects.githubusercontent.com/github-production-release-asset-2e65be/143896
-######################################################################## 100.0%
-...
-==> Upgrading starship
-  1.5.4 -> 1.6.2
+    gcloud config set disable_usage_reporting false
 
-==> Pouring starship--1.6.2.monterey.bottle.tar.gz
-==> Caveats
-zsh completions have been installed to:
-  /usr/local/share/zsh/site-functions
-==> Summary
-🍺  /usr/local/Cellar/starship/1.6.2: 11 files, 6.2MB
-==> Running `brew cleanup starship`...
-Removing: /usr/local/Cellar/starship/1.5.4... (10 files, 5.8MB)
-...
+Do you want to help improve the Google Cloud CLI (y/N)?
 
-```
 
-Feedback given when running an update / upgrade
-
-## Google Cloud CLI
-
-```
 Your current Google Cloud CLI version is: 519.0.0
 The latest available version is: 519.0.0
 
@@ -128,4 +74,39 @@ To update your SDK installation to the latest version [519.0.0], run:
 
 
 Modify profile to update your $PATH and enable shell command completion?
-```
+
+Do you want to continue (Y/n)?
+
+The Google Cloud SDK installer will now prompt you to update an rc file to bring the Google Cloud CLIs into your environment.
+
+Enter a path to an rc file to update, or leave blank to use [/Users/danielfein/.zshrc]:
+Backing up [/Users/danielfein/.zshrc] to [/Users/danielfein/.zshrc.backup].
+[/Users/danielfein/.zshrc] has been updated.
+
+==> Start a new shell for the changes to take effect.
+
+
+Google Cloud CLI works best with Python 3.12 and certain modules.
+
+Download and run Python 3.12 installer? (Y/n)?
+
+Running Python 3.12 installer, you may be prompted for sudo password...
+Password:
+installer: Package name is Python
+installer: Installing at base path /
+installer: The install was successful.
+Setting up virtual environment
+Creating virtualenv...
+Installing modules...
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 1.3 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 45.7 MB/s eta 0:00:00
+  Building wheel for crcmod (pyproject.toml) ... done
+Virtual env enabled.
+
+For more information on how to get started, please visit:
+  https://cloud.google.com/sdk/docs/quickstarts
+
+...
