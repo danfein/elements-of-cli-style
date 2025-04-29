@@ -42,3 +42,19 @@ future by running the following command:
 
 Do you want to help improve the Google Cloud CLI (y/N)?
 ```
+
+## Tanzu tips
+
+```
+➜  ~ tanzu project list
+Listing projects from One Tanzu Integration org
+
+  NAME                                 AGE   INTEGRATIONS
+  Example Project                      110d
+  test                                 110d
+  
+🔎 To set your active project use 'tanzu project use NAME'
+
+➜  ~ tanzu project use test
+✓ Successfully set project to test
+```
