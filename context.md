@@ -1,6 +1,6 @@
 # Context setting
 
-## cf CLI login
+## cf login
 ```
 $ cf login --sso
 API endpoint: https://api.sys.dhaka.cf-app.com
@@ -32,14 +32,25 @@ org:            acme-fitness
 space:          acme-fitness-space
 ```
 
-## cf CLI logout
+## cf target
+```
+$ cf target -s services
+API endpoint:   https://api.sys.zone-3924730.cf-app.com
+API version:    3.185.0
+user:           student-ssxfh8
+org:            student-ssxfh8
+space:          services
+```
+
+
+## cf logout
 ```
 cf logout
 Logging out daniel.fein@broadcom.com...
 OK
 ```
 
-## Tanzu CLI login
+## Tanzu login
 ```
  $ tanzu login
 [i] Opening the browser window to complete the login
