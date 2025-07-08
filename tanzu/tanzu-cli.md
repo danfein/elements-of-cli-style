@@ -1,5 +1,10 @@
 # Tanzu CLI
 
+Styleguide
+```
+https://github.com/vmware-tanzu/tanzu-cli/blob/main/docs/plugindev/style_guide.md
+```
+
 Install
 ```
 $ brew install vmware-tanzu/tanzu/tanzu-cli
