@@ -129,3 +129,23 @@ To update your SDK installation to the latest version [519.0.0], run:
 
 Modify profile to update your $PATH and enable shell command completion?
 ```
+
+## oh my zsh
+
+```
+➜  ~ omz update
+Updating Oh My Zsh
+         __                                     __
+  ____  / /_     ____ ___  __  __   ____  _____/ /_
+ / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \
+/ /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / /
+\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/
+                        /____/
+
+Oh My Zsh is already at the latest version.
+
+To keep up with the latest news and updates, follow us on X: @ohmyzsh
+Want to get involved in the community? Join our Discord: Discord server
+Get your Oh My Zsh swag at: Planet Argon Shop
+➜  ~
+```
