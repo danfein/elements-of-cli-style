@@ -7,7 +7,7 @@
 
 ## Examples / Case Studies 
 * [Heroku CLI design style guide](https://devcenter.heroku.com/articles/cli-style-guide)
-
+* [Heroku CLI designer interview](https://developerrelations.com/talks/designing-a-delightful-command-line-interface/)
 
 ## Copywriting
 * [Microsoft writing style guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
