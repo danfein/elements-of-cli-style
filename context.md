@@ -100,3 +100,13 @@ $ tanzu context use
 
 ```
 Danger of running long.
+
+
+## cf spaces
+```
+$ cf delete-space space2
+This action impacts all resources scoped to this space, including apps, service instances, and space-scoped service brokers.
+Really delete the space space2? [yN]: y
+Deleting space space2 in org NAME as daniel.fein@company.com...
+OK
+```
