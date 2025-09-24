@@ -97,3 +97,31 @@ Available commands:
   version                         prints the om release version
   vm-lifecycle                    commands to manage the state of the Ops Manager VM (aliases: nom)
 ```
+
+## Login
+```
+$ uaac target https://ops-manager.url.cf-app.com/uaa
+Unknown key: Max-Age = 86400
+Unknown key: SameSite = Lax
+
+Target: https://ops-manager.url.cf-app.com/uaa
+
+$  om-workspace uaac token sso get
+Client ID:  opsman
+Client secret:
+Unknown key: Max-Age = 86400
+Unknown key: SameSite = Lax
+Passcode ( from https://ops-manager.dhaka.cf-app.com/uaa/passcode ):  ************
+WARNING: Decoding token without verifying it was signed by its authoring UAA
+
+Successfully fetched token via owner passcode grant.
+Target: https://ops-manager.dhaka.cf-app.com/uaa
+Context: df009256, from client opsman
+```
+
+## Errors
+```
+--- No Auth ---
+$ om products
+2025/09/24 08:50:00 failed to retrieve staged and deployed products could not make api request to diagnostic_report endpoint: could not send api request to GET /api/v0/diagnostic_report: could not parse Opsman target URL: target flag is required, run `om help` for more info
+```

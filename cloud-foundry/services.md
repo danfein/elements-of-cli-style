@@ -46,9 +46,19 @@ OK
 - Command feedback takes a few seconds to complete, waiting for acknowledgement.
 - The command will not wait for the service to be ready, unless the --wait flag is used.
 
+## cf services
+```
+$ cf services
+Getting service instances in org name-of-org / space space-name as user@company.com...
+
+name   offering         plan       bound apps   last operation     broker           upgrade available
+cups   user-provided                            create succeeded
+test   app-autoscaler   standard                create succeeded   app-autoscaler   no
+```
+
 ## cf service
 ```
-cf service training-app-db
+$ cf service training-app-db
 Showing info of service training-app-db in org student-ssxfh8 / space default as student-ssxfh8...
 
 name:            training-app-db
