@@ -110,3 +110,64 @@ Really delete the space space2? [yN]: y
 Deleting space space2 in org NAME as daniel.fein@company.com...
 OK
 ```
+
+## Kubectx
+Popular context manager for kubernetes
+
+```
+Listing contexts + choosing from list
+$ kubectx 
+
+  tap-dhaka-pinniped
+  crc-developer
+  crc-admin
+  gke_pivotal-knative_us-west1-b_dev-framework-pm-acceptance-cluster
+> gke_pivotal-knative_us-west1-b_dev-frmwrk-tap1-1
+>
+5/5
+```
+Notes: 
+blue prompt accepts text entry to filter list  
+red prompt uses arrow keys to choose  
+enter selects.  
+
+```
+--- Set context ---
+$ kubectx crc-admin  
+Switched to context "crc-admin".  
+
+--- Check current context ---
+
+$ kubectx -c  (or --current)
+gke_pivotal-knative_us-west1-b_dev-frmwrk-tap1-1
+
+=== Switch to previous context ===
+
+$ kubectx -
+Switched to context "gke_pivotal-knative_us-west1-b_dev-frmwrk-tap1-1".
+
+--- delete context ---
+❯ kubectx -d tap-dhaka-pinniped
+Deleting context "tap-dhaka-pinniped"...
+deleted context tap-dhaka-pinniped from /Users/dfein/.kube/config
+```
+note: No confirmation prompting. It will tab-complete the name of the context
+Rename context
+$ kubectx crc-ops=crc-admin
+Context "crc-admin" renamed to "crc-ops".
+
+note:tab-completion does not work here, you can also use a period ‘.’ for the old-name to rename the current context.
+
+
+
+
+## Errors
+```
+--- Invalid context name ---
+$ tanzu context use <badname>
+x Cannot change contexts, <badname> was not found. Contexts can be listed with  ‘tanzu context list’.
+
+--- Inactive context ---
+$ tanzu apps workload list
+x Cannot list workloads, there are no active K8s contexts. Contexts can be added with the ‘tanzu context create’ command. 
+```

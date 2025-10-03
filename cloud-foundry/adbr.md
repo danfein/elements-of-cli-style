@@ -1,4 +1,5 @@
 # Plugin: Application Data Backup and Restore
+https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-for-postgres-on-cloud-foundry/1-2/postgres-1-2/backup-restore-adbr.html
 
 ## Install
 ```
@@ -33,13 +34,6 @@ USAGE:
    cf adbr restore SERVICE BACKUP-ID [-r full-only|latest | --restore-point=full-only|latest] [--force] [--unencrypted]
 ```
 
-## Errors
-```
-$  cf adbr
-Failed to get CF metadata. Please ensure you are logged in and targeting an org/space. Error: Authentication has expired.  Please log back in to re-authenticate.
-
-TIP: Use `cf login -a <endpoint> -u <user> -o <org> -s <space>` to log back in and re-authenticate.%
-```
 
 ## Marketplace
 ```
@@ -65,4 +59,62 @@ p.redis                 no
 genai                   no
 p.mysql                 yes
 scheduler-for-pcf       no
+```
+
+## Backup
+```
+$ cf abdr backup acme-pg --unencrypted
+OK
+```
+
+## Restore
+```
+--- help ---
+cf adbr restore -h
+NAME:
+   adbr - application data backup restore operations
+
+USAGE:
+   cf adbr marketplace
+   cf adbr list-backups SERVICE [-l <num> | --limit <num>] [--unencrypted]
+   cf adbr backup SERVICE [--unencrypted]
+   cf adbr get-status SERVICE [--unencrypted]
+   cf adbr restore SERVICE BACKUP-ID [-r full-only|latest | --restore-point=full-only|latest] [--force] [--unencrypted]
+
+--- restore ---
+$ cf abdr restore acme-pg 1234-5678 -r latest
+Restoring service instance RESTORE_SERVICE_NAME in org $ORG / space $SPACE as $USER...
+This action will overwrite all data in this service instance.
+Really restore the service instance RESTORE_SERVICE_NAME? [yN]: y
+OK
+```
+
+
+## Errors
+```
+--- No auth ---
+$  cf adbr
+Failed to get CF metadata. Please ensure you are logged in and targeting an org/space. Error: Authentication has expired.  Please log back in to re-authenticate.
+
+TIP: Use `cf login -a <endpoint> -u <user> -o <org> -s <space>` to log back in and re-authenticate.%
+
+--- Missing Flags ---
+$ cf adbr restore
+the required arguments `SERVICE` and `BACKUP-ID` were not provided
+
+
+--- Backup while service is being created ---
+$ cf adbr backup acme-pg --unencrypted
+Failed to backup service instance "acme-pg": failed due to server error, status code: 500
+
+--- server error ---
+$ cf adbr list-backups acme-pg
+Failed to list backups for service instance "acme-pg": failed due to server error, status code: 400
+
+$ cf adbr get-status acme-pg
+Getting status of service instance acme-pg in org dftest / space dftest as daniel.fein@name.com...
+Backup ID                                         Time of Backup                 Status          Reason
+e2e61d90-80de-404a-9193-8c5182aba824_1758910345   Fri Sep 26 18:12:34 UTC 2025   Backup failed   failed to upload artifact: RequestError: send request failed
+                                                                                                 caused by: Put "https://dummy.s3.endpoint_url.value/dummy.s3.bucket_name.value/dummy.path.value/postgres/service-instance_e2e61d90-80de-404a-9193-8c5182aba824/2025/09/26/e2e61d90-80de-404a-9193-8c5182aba824_1758910345/artifact": dial tcp: lookup dummy.s3.endpoint_url.value on 169.254.0.2:53: no such host
+
 ```
