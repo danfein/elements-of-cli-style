@@ -13,6 +13,23 @@ OK
 Really delete the space temp? [yN]: n
 'temp' has not been deleted.
 ```
+### Org Group
+```
+$ cf org-groups
+Getting org-groups as tanzu_platform_admin...
+
+name           foundation group   status
+abhisheks-og   fg-name            COMPLETED
+df-og          fg-name            FAILED  
+
+$ cf delete-org-group df-og
+Really delete the org group df-og? [yN]: y
+Deleting org group df-og as tanzu_platform_admin...
+OK
+
+TIP: No org group or space group targeted, use 'cf target -o ORG_GROUP -s SPACE_GROUP' to target an org group and space group.
+```
+
 ### Org
 ```
 $ cf delete-org dftest
