@@ -1,4 +1,8 @@
 # cf Marketplace
+AI app example repos: 
+- https://github.com/cpage-pivotal/cf-mcp-client
+- https://github.com/cpage-pivotal/time-mcp-server
+
 
 ## Help
 ```
@@ -43,7 +47,17 @@ broker: genai-service
    plan                   description                               free or paid   costs
    chat-and-tools-model   A model with chat and tool capabilities   free           
    chat-model             A model with chat capabilities            free           
-   embedding-model        A high-performing open embedding model    free           
+   embedding-model        A high-performing open embedding model    free     
+
+---
+$ cf marketplace -e postgres
+Getting service plan information for service offering postgres in org student-dvvcn8 / space default as student-dvvcn8...
+
+broker: postgres-odb
+   plan                    description                                                                                                              free or paid   costs
+   on-demand-postgres-db   This plan provides a test on-demand postgres instance, tailored for caching use-cases with persistence to disk enabled   free           
+
+===
 ```
 
 ## Create
@@ -52,6 +66,13 @@ $ cf create-service genai chat-and-tools-model chat-llm
 Creating service instance chat-llm in org student-mtntl7 / space default as student-mtntl7...
 
 Service instance chat-llm created.
+OK
+
+---
+$ cf create-service genai embedding-model embeddings-llm
+Creating service instance embeddings-llm in org student-dvvcn8 / space default as student-dvvcn8...
+
+Service instance embeddings-llm created.
 OK
 ```
 
@@ -62,6 +83,14 @@ Binding service instance chat-llm to app ai-tool-chat in org student-mtntl7 / sp
 OK
 
 TIP: Use 'cf restage ai-tool-chat' to ensure your env variable changes take effect
+===
+$ cf bind-service ai-tool-chat embeddings-llm
+Binding service instance embeddings-llm to app ai-tool-chat in org student-dvvcn8 / space default as student-dvvcn8...
+OK
+
+TIP: Use 'cf restage ai-tool-chat' to ensure your env variable changes take effect
+---
+
 ```
 
 ## Create User Provided Service

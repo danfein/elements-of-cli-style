@@ -684,3 +684,40 @@ GLOBAL OPTIONS:
    -v                                 Print API request diagnostics to stdout
 ```
 
+## Snowflake Snow CLI
+
+```
+snow
+
+ Usage: snow [OPTIONS] COMMAND [ARGS]...
+
+ Snowflake CLI tool for developers [v3.14.0]
+
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --help                -h            Show this message and exit.                                                                        │
+│ --version                           Shows version of the Snowflake CLI                                                                 │
+│ --info                              Shows information about the Snowflake CLI                                                          │
+│ --config-file                 FILE  Specifies Snowflake CLI configuration file that should be used                                     │
+│ --install-completion                Install completion for the current shell.                                                          │
+│ --show-completion                   Show completion for the current shell, to copy it or customize the installation.                   │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ app          Manages a Snowflake Native App                                                                                            │
+│ auth         Manages authentication methods.                                                                                           │
+│ connection   Manages connections to Snowflake.                                                                                         │
+│ cortex       Provides access to Snowflake Cortex.                                                                                      │
+│ dbt          Manages dbt on Snowflake projects.                                                                                        │
+│ git          Manages git repositories in Snowflake.                                                                                    │
+│ helpers      Helper commands.                                                                                                          │
+│ init         Creates project directory from template.                                                                                  │
+│ logs         Retrieves logs for a given object.                                                                                        │
+│ notebook     Manages notebooks in Snowflake.                                                                                           │
+│ object       Manages Snowflake objects like warehouses and stages                                                                      │
+│ snowpark     Manages procedures and functions.                                                                                         │
+│ spcs         Manages Snowpark Container Services compute pools, services, image registries, and image repositories.                    │
+│ sql          Executes Snowflake query.                                                                                                 │
+│ stage        Manages stages.                                                                                                           │
+│ streamlit    Manages a Streamlit app in Snowflake.                                                                                     │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+```
