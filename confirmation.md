@@ -1,5 +1,29 @@
 # Confirmation
 
+## Claude Code install
+
+```
+❯  curl -fsSL https://claude.ai/install.sh | bash
+Setting up Claude Code...
+
+✔ Claude Code successfully installed!
+
+  Version: 2.1.119
+
+  Location: ~/.local/bin/claude
+
+
+  Next: Run claude --help to get started
+
+⚠ Setup notes:
+  ● Native installation exists but ~/.local/bin is not in your PATH. Run:
+
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+
+
+✅ Installation complete!
+```
+
 ## Pyenv (python verison manager)
 
 ```

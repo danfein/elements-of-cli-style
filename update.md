@@ -1,5 +1,13 @@
 # Updates
 
+## Claude Code
+```
+❯ claude update
+Current version: 2.1.119
+Checking for updates to latest version...
+Claude Code is up to date (2.1.119)
+```
+
 ## Pihole (DNS ad-blocker)
 
 ```
