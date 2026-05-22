@@ -1,5 +1,17 @@
 # Progress
 
+## Ollama
+```
+curl -fsSL https://ollama.com/install.sh | sh
+>>> Downloading Ollama for macOS...
+######################################################################## 100.0%
+>>> Installing Ollama to /Applications...
+>>> Adding 'ollama' command to PATH (may require password)...
+Password:
+>>> Starting Ollama...
+>>> Install complete. You can now run 'ollama'.
+```
+
 ## Git (version control)
 
 ```
