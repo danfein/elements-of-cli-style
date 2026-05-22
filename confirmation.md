@@ -1,5 +1,25 @@
 # Confirmation
 
+## Openclaw install via ollama
+```
+~ ollama launch openclaw
+OpenClaw is not installed. Install with npm?
+
+   Yes    No
+
+←/→ navigate • enter confirm • esc cancel
+
+---
+~ ollama launch openclaw
+
+Installing OpenClaw...
+⠧
+
+
+---
+
+```
+
 ## Claude Code install
 
 ```
@@ -37,13 +57,13 @@ Square brackets, vertical bar divider, default choice capitalized
 ## cf CLI space create
 ```
 $ cf create-space example-two
-Creating space example-two in org acme-fitness as daniel.fein@broadcom.com...
+Creating space example-two in org acme-fitness as daniel.fein@company.com...
 OK
 
-Assigning role SpaceManager to user daniel.fein@broadcom.com in org acme-fitness / space example-two as daniel.fein@broadcom.com...
+Assigning role SpaceManager to user daniel.fein@company.com in org acme-fitness / space example-two as daniel.fein@company.com...
 OK
 
-Assigning role SpaceDeveloper to user daniel.fein@broadcom.com in org acme-fitness / space example-two as daniel.fein@broadcom.com...
+Assigning role SpaceDeveloper to user daniel.fein@company.com in org acme-fitness / space example-two as daniel.fein@company.com...
 OK
 
 TIP: Use 'cf target -o "acme-fitness" -s "example-two"' to target new space
