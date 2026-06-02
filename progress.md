@@ -1,5 +1,24 @@
 # Progress
 
+## Claude Code
+```
+➜  ~ curl -fsSL https://claude.ai/install.sh | bash
+Setting up Claude Code...
+
+✔ Claude Code successfully installed!
+
+  Version: 2.1.160
+
+  Location: ~/.local/bin/claude
+
+
+  Next: Run claude --help to get started
+
+✅ Installation complete!
+
+➜  ~
+```
+
 ## Ollama
 ```
 curl -fsSL https://ollama.com/install.sh | sh
