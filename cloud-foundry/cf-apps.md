@@ -23,3 +23,14 @@ memory usage:   48M
 #1   running   2025-05-06T20:55:58Z   0.1%   9M of 48M   10.8M of 256M   0B/s of 16K/s   8.0%              
 #2   running   2025-05-06T20:56:00Z   0.1%   9M of 48M   10.8M of 256M   0B/s of 16K/s   9.5%   
 ```
+
+## cf apps
+```
+Getting apps in org my-org / space development as user@example.com...
+OK
+
+name         requested state   instances   memory   disk   urls
+api-service  started           2/2         1G       1G     ://example.com
+frontend-ui  started           1/1         512M     1G     ://example.com
+worker-node  stopped           0/3         2G       2G     
+```
