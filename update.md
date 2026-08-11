@@ -157,3 +157,21 @@ Want to get involved in the community? Join our Discord: Discord server
 Get your Oh My Zsh swag at: Planet Argon Shop
 ➜  ~
 ```
+
+## cf CLI
+```
+--
+[i] Checking for CLI updates...
+[i] Updated core component to v10.5.0-dev-nightly-20260730-44171d8
+[!] CLI update is fetched but some components could not be updated due to insufficient permissions. The CLI is still ok to use. To complete the update manually, run `cf update-cli` with administrator/root privileges or reinstall the updated CLI.
+➜  ~ cf update-cli
+--
+[i] Checking for CLI updates...
+[!] CLI update is fetched but some components could not be updated due to insufficient permissions. The CLI is still ok to use. To complete the update manually, run `cf update-cli` with administrator/root privileges or reinstall the updated CLI.
+[x] : open /usr/local/bin/.cf10.new: permission denied
+➜  ~ sudo cf update-cli
+Password:
+--
+[i] Checking for CLI updates...
+[i] CLI update successful. You can run `cf version` to see the installed version.
+```
