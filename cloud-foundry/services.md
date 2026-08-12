@@ -312,3 +312,88 @@ url:
 Creating user provided service interactive in org student-ssxfh8 / space services as student-ssxfh8...
 OK
 ```
+
+## service backup list
+```
+$ cf service-backups -h
+NAME:
+   service-backups - List backups for a service instance
+
+USAGE:
+   cf service-backups SERVICE_INSTANCE [-l NUM]
+
+OPTIONS:
+   --limit, -l       Number of recent backups to display (Default: 5)
+   --fg              Foundation group name (Tanzu Hub only)
+   --foundation      Foundation name (Tanzu Hub only)
+
+SEE ALSO:
+   create-service-backup, restore-service-backup
+---
+cf service-backups postfacto-redis
+Getting backups of service instance postfacto-redis in org df-og / space postfacto as tanzu_platform_admin...
+
+Backup ID                                         Name   Time of Backup
+4a3e7513-70a3-4610-a488-3c6a285eec73_1786554072          Wed Aug 12 17:01:12 UTC 2026
+
+```
+
+## Sevice backup
+```
+cf create-service-backup -h
+NAME:
+   create-service-backup - Create a backup of a service instance
+
+USAGE:
+   cf create-service-backup SERVICE_INSTANCE [-n NAME] [-w]
+
+OPTIONS:
+   --name, -n        Optional name for the backup
+   --wait, -w        Wait for the operation to complete
+   --fg              Foundation group name (Tanzu Hub only)
+   --foundation      Foundation name (Tanzu Hub only)
+
+SEE ALSO:
+   restore-service-backup, service-backups
+---
+$ cf create-service-backup postfacto-redis
+Creating backup of service instance postfacto-redis in org df-og / space postfacto as tanzu_platform_admin...
+
+Backup creation initiated for service instance postfacto-redis.
+
+Job GUID: c400b971-8a7d-4cde-8c79-48558d40d54c
+Check job status with: cf curl /v3/jobs/c400b971-8a7d-4cde-8c79-48558d40d54c
+```
+
+## Restore service backup
+```
+$ cf restore-service-backup -h
+NAME:
+   restore-service-backup - Restore a service instance from a backup
+
+USAGE:
+   cf restore-service-backup SERVICE_INSTANCE [--backup-id ID] [--target-timestamp TIME] [--restore-point TYPE] [--source-service-instance-guid GUID] [-f] [-w]
+
+OPTIONS:
+   --backup-id                         ID of the backup to restore from
+   --target-timestamp                  Point-in-time to restore to
+   --restore-point                     Restore type: full-only, latest, or point-in-time
+   --source-service-instance-guid      GUID of the source service instance for cross-instance restore
+   --force, -f                         Force restore without confirmation
+   --wait, -w                          Wait for the operation to complete
+   --fg                                Foundation group name (Tanzu Hub only)
+   --foundation                        Foundation name (Tanzu Hub only)
+
+---
+
+$ cf restore-service-backup postfacto-redis --backup-id 4a3e7513-70a3-4610-a488-3c6a285eec73_1786554072
+Restoring service instance postfacto-redis in org df-og / space postfacto as tanzu_platform_admin...
+This action will overwrite all data in this service instance.
+Really restore the service instance postfacto-redis? [yN]: y
+
+Restore initiated for service instance postfacto-redis.
+
+Job GUID: 4ba029ff-87a6-45a3-a4b9-eac6f7116e01
+Check job status with: cf curl /v3/jobs/4ba029ff-87a6-45a3-a4b9-eac6f7116e01
+OK
+```
